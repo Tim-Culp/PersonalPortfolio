@@ -1,0 +1,77 @@
+body {
+    font-family: 'Cairo';
+    background-color: #191919;
+    color: #606060;
+}
+
+#logo {
+    width: 80px;
+    position: relative;
+    top: 0px;
+    
+    /* margin-left: -8px; */
+}
+
+#navBar {
+    background-color: #191919;
+    height:100px;
+    width:100vw;
+    box-shadow: 0 8px 4px rgba(0, 0, 0, 0.26);
+    z-index: 1;
+}
+
+.navbarGroup {
+    font-size: 20pt;
+    margin-right: 1em;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.75);
+}
+
+
+
+#header #headerImage{
+    position: absolute;
+    width:100vw;
+    height: 370px;
+    background-image: url("./header.jpg");
+    background-repeat: repeat-y;
+    filter:blur(4px);
+    background-size: cover;
+    background-position: 0% 0%;
+    background-color: black;
+    z-index: -1;
+}
+
+#header {
+    position: relative;
+    width:100vw;
+    height: 370px;
+    z-index: -1;
+}
+
+.whitePill {
+    position:relative;
+    top: 35px;
+    background-color: #ffffff4f;
+    margin: auto;
+    border-radius: 100px;
+    /* margin-top: 25px; */
+}
+
+.whitePill h1{
+    position: relative;
+    text-align: center;
+    color: white;
+    text-shadow: 3px 3px 2px #000000bd;
+}
+
+#pageContainer {
+    background-color: #303030;
+    position:relative;
+    top: 100px;
+    height:max-content;
+    border-radius: 78px 78px 50px 50px;
+    padding: 78px;
+    margin-bottom: 100px;
+    font-size: 20pt;
+
+}
