@@ -1,77 +1,96 @@
+:root {
+    --text-color: red;
+    --button-color: rgb(0, 201, 0);
+    --puzzle-block-color: lightblue;
+    --border-color: rgba(0, 201, 0, 0.233);
+}
 body {
-    font-family: 'Cairo';
-    background-color: #191919;
-    color: #606060;
+    background-color:black;
+}
+#shadow {
+    width:960px;
+    height: 960px;
+    margin: auto;
+    position: absolute;
+    background-image: radial-gradient(transparent, #000000b6);
+}
+#panel {
+    width:960px;
+    height: 960px;
+    margin: auto;
+    background-color: #303030;
+    box-shadow: 0px 0px 1px 10px rgba(0, 0, 0, 0.336) inset;
 }
 
-#logo {
-    width: 80px;
+#access {
     position: relative;
-    top: 0px;
-    
-    /* margin-left: -8px; */
+    width: 420px;
+    height: 69px;
+    background-color: #222222;
+    margin: auto;
+    top: 360px;
+    box-shadow: 0 0 10px black inset;
+    border: 2px solid rgba(0, 0, 0, 0.308);
+    /* box-shadow: 0 0 20px 0px var(--border-color); */
 }
 
-#navBar {
-    background-color: #191919;
-    height:100px;
-    width:100vw;
-    box-shadow: 0 8px 4px rgba(0, 0, 0, 0.26);
+#accessText{
+    font-family: "Aldrich", sans-serif;
+    color: var(--text-color);
+    text-shadow: 0 0 6px var(--text-color);
+    position: relative;
+    margin-left: 35px;
+    margin-top: 3px;
+    height: 15px;
+    line-height:12px;
+    padding-top: 5px;
+    padding-left: 4px;
+    margin-bottom: 5px;
+    cursor: default;
+    background-color: rgba(0, 0, 0, 0.137);
+    box-shadow: 0 0 10px black inset;
+    width:350px;
+    overflow: hidden;
+    /* display: none; */
+}
+
+#access div button {
+    position: relative;
+    margin: auto;
+    border: none;
+    height: 32px;
+    width:32px;
+    border-radius: 100%;
+    background-color: var(--button-color);
+    box-shadow: 0 0 6px 1px var(--button-color);
+    cursor: pointer;
+    
+}
+
+#access #accessButtonDiv {
+    width: fit-content;
+    margin: auto;
+    /* display: none; */
+}
+
+#puzzleBlock {
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--puzzle-block-color);
+    box-shadow: 0 0 6px 1px var(--puzzle-block-color);
+    display: none;
     z-index: 1;
 }
 
-.navbarGroup {
-    font-size: 20pt;
-    margin-right: 1em;
-    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.75);
-}
-
-
-
-#header #headerImage{
+#puzzleHole {
     position: absolute;
-    width:100vw;
-    height: 370px;
-    background-image: url("./header.jpg");
-    background-repeat: repeat-y;
-    filter:blur(4px);
-    background-size: cover;
-    background-position: 0% 0%;
-    background-color: black;
-    z-index: -1;
-}
-
-#header {
-    position: relative;
-    width:100vw;
-    height: 370px;
-    z-index: -1;
-}
-
-.whitePill {
-    position:relative;
-    top: 35px;
-    background-color: #ffffff4f;
-    margin: auto;
-    border-radius: 100px;
-    /* margin-top: 25px; */
-}
-
-.whitePill h1{
-    position: relative;
-    text-align: center;
-    color: white;
-    text-shadow: 3px 3px 2px #000000bd;
-}
-
-#pageContainer {
-    background-color: #303030;
-    position:relative;
-    top: 100px;
-    height:max-content;
-    border-radius: 78px 78px 50px 50px;
-    padding: 78px;
-    margin-bottom: 100px;
-    font-size: 20pt;
-
+    top: 30px;
+    left: 380px;
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 0 10px 0 black inset;
+    display: none;
 }

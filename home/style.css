@@ -1,0 +1,186 @@
+body {
+    font-family: 'Cairo';
+    background-color: #191919;
+    /* color: #606060; */
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.336);
+    color: #808080;
+}
+
+#logo {
+    width: 80px;
+    position: relative;
+    top: 0px;
+    
+    /* margin-left: -8px; */
+}
+.navbar {
+    position: fixed;
+}
+#navBar {
+    background-color: #191919;
+    height:100px;
+    width:100vw;
+    box-shadow: 0 8px 4px rgba(0, 0, 0, 0.26);
+    z-index: 1;
+}
+
+.navbarGroup {
+    font-size: 20pt;
+    margin-right: 1em;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.75);
+}
+
+
+
+#header #headerImage{
+    position: absolute;
+    width:100vw;
+    height: 370px;
+    background-image: url("./header.jpg");
+    background-repeat: repeat-y;
+    filter:blur(4px);
+    background-size: cover;
+    background-position: 0% 0%;
+    background-color: black;
+    z-index: -1;
+}
+
+#header {
+    position: relative;
+    top: 100px;
+    width:100vw;
+    height: 370px;
+    z-index: -1;
+}
+
+.whitePill {
+    position:relative;
+    top: 35px;
+    background-color: #ffffff4f;
+    margin: auto;
+    border-radius: 100px;
+    /* margin-top: 25px; */
+}
+
+.whitePill h1{
+    position: relative;
+    text-align: center;
+    color: white;
+    text-shadow: 3px 3px 2px #000000bd;
+}
+.container {
+    background-color: #303030;
+    position:relative;
+    top: 100px;
+    height:max-content;
+    border-radius: 78px 78px 50px 50px;
+    padding: 78px;
+    margin-bottom: 100px;
+    font-size: 20pt;
+
+}
+.writing {
+    text-indent: 2em;
+    /* text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.336);
+    color: #808080; */
+}
+
+.title {
+    font-size: 40pt;
+    text-align: center;
+    color: white;
+    margin-bottom: 60px;
+}
+
+.col-md img {
+    max-width: 300px;
+    width: 300px;
+    margin: auto;
+    transition-duration: 0.25s;
+}
+
+.card-body {
+    background-color: #404040;
+    color: #808080;
+}
+.card-img-top {
+    opacity: 50%;
+}
+.card {
+    
+    background-color: transparent;
+    border: none;
+    border-color: black;
+    border-radius: 80px;
+    overflow: hidden;
+}
+.card:hover .card-body{
+    background-color: #606060;
+    color: white;
+    transition-duration: 0.25s;
+}
+.card:hover .card-img-top{
+    opacity: 100%;
+    transition-duration: 0.25s;
+}
+.card:hover .btn-link {
+    opacity: 100%;
+    transition-duration: 0.25s;
+}
+.btn-link:hover {
+    opacity: 100%;
+    transition-duration: 0.25s;
+}
+.btn-link {
+    transition-duration: 0.25s;
+    opacity: 50%;
+    display: block; 
+    width: fit-content;
+    margin: auto;
+    position: relative;
+    background-color: rgb(231, 0, 0);
+    color: white;
+}
+.btn-link:hover {
+    color:white;
+    text-decoration: none;
+    background-color: rgb(197, 0, 0);
+}
+
+@media (max-width: 1199px) { 
+    .col-md img {
+        position: relative;
+        width: 225px;
+        margin: auto;
+        /* display: none; */
+    }
+}
+@media (max-width: 991px) { 
+    .col-sm-8 {
+        width: 100%;
+        margin: auto;
+    }
+    .col-md {
+        position: relative;
+        width: 100%;
+        margin: auto;
+        /* display: none; */
+    }
+    .col-md img {
+        margin: auto;
+        width:100%
+    }
+}
+
+ @media (max-width: 767px) { 
+    .navbarGroup {
+        display: none;
+    }
+    .col-md img {
+        display:none;
+    }
+    .col-sm-8 p{
+        font-size: 15pt;
+        /* box-shadow: 4px 4px 6px black; */
+    }
+}
