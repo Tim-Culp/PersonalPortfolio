@@ -82,8 +82,8 @@ accessButton.addEventListener('click', e => {
         let yOffset = 370 / 735 * window.innerHeight;
         e = window.event;
 
-        puzzleBlock.style.top = (e.clientY - access.offsetTop - 15) + "px";
-        puzzleBlock.style.left = (e.clientX - access.offsetLeft - 15) + "px";
+        puzzleBlock.style.top = (e.clientY - access.offsetTop + window.scrollY - 15) + "px";
+        puzzleBlock.style.left = (e.clientX - access.offsetLeft + window.scrollX - 15) + "px";
         // console.log(e.clientX, e.clientY);
 
         document.onmouseup = () => {
@@ -93,8 +93,8 @@ accessButton.addEventListener('click', e => {
         }
 
         document.onmousemove = (e) => {
-            puzzleBlock.style.top = (e.clientY - access.offsetTop - 15) + "px";
-            puzzleBlock.style.left = (e.clientX - access.offsetLeft - 15) + "px";
+            puzzleBlock.style.top = (e.clientY - access.offsetTop + window.scrollY - 15) + "px";
+            puzzleBlock.style.left = (e.clientX - access.offsetLeft + window.scrollX - 15) + "px";
             // accessText.innerText = [e.clientX, e.clientY, window.innerWidth, window.innerHeight].toString();
         }
     }
