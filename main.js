@@ -11,6 +11,8 @@ let i = false;
 
 let state = "main"
 
+
+
 // if (state == "main") {
     const mainAnim = setInterval(() => {
         if (i) {

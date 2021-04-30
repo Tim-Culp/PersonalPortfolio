@@ -1,3 +1,6 @@
+:root{
+    --form-width: 750px;
+}
 html {
     scroll-behavior: smooth;
 }
@@ -95,6 +98,7 @@ body {
     font-size: 20pt;
 
 }
+
 .writing {
     text-indent: 2em;
     /* text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.336);
@@ -116,6 +120,121 @@ body {
     margin: auto;
     transition-duration: 0.25s;
 }
+.block {
+    /* width:100%; */
+    margin-bottom: 40px;
+    /* padding:40px; */
+    border-radius: 15px;
+    /* border: 2px solid white; */
+    display:flex;
+    padding:30px;
+    /* padding: 0 20px; */
+    /* overflow:hidden; */
+}
+.block:hover{
+    background-color:rgba(255, 255, 255, 0.055);
+    transition-duration: 0.1s;
+}
+.blockBody {
+    min-height: 180px;
+    /* min-width: 650px; */
+    width: 100%;
+    float:left;
+    display:block;
+    position:relative;
+    margin-left:24px;
+    /* background-color:orange; */
+}
+.blockThumb {
+    max-width:320px;
+    height: 180px;
+    border-radius: 8px;
+    /* margin: 0 auto; */
+    position: relative;
+    display:block;
+    float:left;
+    box-shadow: rgba(0, 0, 0, 0.315) 4px 4px 4px;
+}
+h3.blockTitle{
+    text-align: left;
+    margin: none;
+    color: lightgray;
+}
+p.blockText {
+    font-size: 16px;
+    min-height: 88px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+a.block-btn {
+    color: rgb(218, 218, 218);
+    text-shadow: none;
+    padding: 0px 6px;
+    border-radius: 8px;
+    height: 50px;
+    text-decoration: none;
+    
+}
+a.block-btn:hover {
+    cursor: pointer;
+    color:white;
+}
+a.blockSiteButton{
+    background-color:rgb(197, 0, 0);
+    position: absolute;
+    text-decoration: none;
+    /* top: 5px; */
+    bottom: -10px;
+    left: 12px;
+    line-height:25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    height: 25px;
+}
+a.blockSiteButton:hover{
+    background-color:rgb(231, 0, 0);
+}
+div.block-git-btns{
+    display: block;
+    width: max-content;
+    /* background-color: green; */
+    position: absolute;
+    bottom: -10px;
+    right: 20px;
+}
+a.blockGitButton {
+    font-size: 25px;
+    text-align: center;
+    /* margin:auto; */
+    line-height: 40px;
+    margin-left: 0px;
+    margin-top: 0;
+    width: 40px;
+    height: 40px;
+
+    background-color:rgb(17, 17, 17);
+}
+a.blockGitButton:hover {
+    background-color:rgb(66, 66, 66);
+}
+.block-git-title {
+    width: 600px;
+    position: absolute;
+    bottom: 34px;
+    right: 8px;
+    font-size: 14px;
+    text-align: right;
+}
+.block-git-btn-span {
+    position: absolute;
+    right: 0;
+    top: 65px;
+    font-size: 15px;
+    color: white;
+    width: 650px;
+    text-align: right;
+}
 
 .card-body {
     background-color: #404040;
@@ -125,7 +244,7 @@ body {
     opacity: 50%;
 }
 .card {
-    
+    /* width: 300px; */
     background-color: transparent;
     border: none;
     border-color: black;
@@ -176,15 +295,100 @@ body {
     margin-top: 20px;
 }
 
+.blockThumbMobile{
+    width:320px;
+    height:180px;
+    margin: auto;
+    display: none;
+    margin-bottom:10px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.39) 4px 4px 4px;
+}
+.contactLinkImg{
+    width:100%;
+}
+
+.contactLink{
+    text-align: center; 
+    display: block; 
+    margin: auto;
+}
+
+.resume-logo{
+    width: 100px;
+    margin: auto; 
+    margin-bottom: 20px; 
+    display: block;
+}
+
+.resume-group {
+    vertical-align: auto; 
+    position: relative; 
+    top: 60px;
+}
+
+.resume-link{
+    display:block;
+    position:relative;
+    margin:auto;
+    width:fit-content;
+    text-decoration: none;
+}
+.resume-link:hover{
+    text-decoration:none;
+}
+
+.form-email{
+    width: var(--form-width); 
+    background-color: #191919; 
+    border-color: transparent; 
+    color: #808080; 
+    font-size: 24pt; 
+    height: 35px; 
+    padding: 4px;
+}
+.form-message{
+    width: var(--form-width); 
+    background-color: #191919; 
+    border-color: transparent; 
+    color: #808080; 
+    font-size: 24pt; 
+    padding: 4px;
+}
+.form-send-btn{
+    float:right;
+}
+.contact-form{
+    text-align: center; 
+    width:var(--form-width);
+    margin:auto;
+    margin-top: 20px;
+}
+.form-paragraph{
+    text-align: center;
+    font-size: 25px;
+    width:var(--form-width);
+    margin:auto;
+}
+.contact-title{
+    margin-top: 60px; 
+    margin-bottom: 10px;
+}
+
 @media (max-width: 1199px) { 
     .col-md img {
         position: relative;
         width: 225px;
         margin: auto;
-        /* display: none; */
     }
 }
-@media (max-width: 991px) { 
+@media (max-width: 992px) {
+    :root{
+        --form-width: 500px;
+    }
+    .blockThumb{display: none;}
+    .blockThumbMobile{display:block;}
+    h3.blockTitle{text-align:center;}
     .col-sm-8 {
         width: 100%;
         margin: auto;
@@ -202,6 +406,14 @@ body {
 }
 
  @media (max-width: 767px) { 
+    :root{
+        --form-width:400px;
+    }
+    .block {
+        padding:10px;
+        padding-bottom: 30px;
+        padding-left: 0;
+    }
     .navbarGroup {
         display: none;
     }
@@ -212,4 +424,22 @@ body {
         font-size: 15pt;
         /* box-shadow: 4px 4px 6px black; */
     }
+
+    .contactLinkImg{
+        display:none;
+    }
+    .contactLink{
+        position: relative;
+        display: block;
+        top: -20px;
+        margin-bottom: 20px;    
+    }
+    .resume-group{
+        position: relative;
+        top: -40px;
+    }
+    .contact-title{
+        margin-top:0px;
+    }
+
 }
